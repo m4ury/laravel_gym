@@ -1,8 +1,8 @@
 @extends('layouts.master')
 @section('content')
     <div class="container">
-        <div class="row">
-            {{ Form::open(['action' => 'PacienteController@store', 'method' => 'POST', 'class' => 'form-horizontal']) }}
+        <div class="row justify-content-left">
+            {{ Form::open(['action' => 'PacienteController@store', 'method' => 'POST', 'class' => 'form-horizontal col-sx-12 col-sm-12 col-lg-8']) }}
             <div class="form-group row">
                 {!! Form::label('rut', 'Rut', ['class' => 'col-sm-2 col-form-label']) !!}
                 <div class="col-sm-6">
@@ -29,7 +29,7 @@
             </div>
             <div class="form-group row">
                 {!! Form::label('apellidos', 'Apellidos', ['class' => 'col-sm-2 col-form-label']) !!}
-                <div class="col-sm-5">
+                <div class="col-sm-5 py-3">
                     {!! Form::text('apellido_paterno',null, ['class' => 'form-control form-control-sm'.($errors->has('apellido_paterno') ? '
                     is-invalid' : ''), 'placeholder' => 'Apellido Paterno']) !!}
                     @if ($errors->has('apellido_paterno'))

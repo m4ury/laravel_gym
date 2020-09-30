@@ -2,7 +2,7 @@
 @section('content')
     <div class="container">
         <div class="row">
-            {{ Form::open(['action' => 'AntropometriaController@store', 'method' => 'POST', 'class' => 'form-horizontal']) }}
+            {{ Form::open(['action' => 'AntropometriaController@store', 'method' => 'POST', 'class' => 'form-horizontal -sx-12 col-sm-12 col-lg-8']) }}
             <div class="form-group">
                 <label for="">Paciente</label>
                 <select name="paciente_id" class="form-control" id="select-paciente" required>
@@ -42,7 +42,7 @@
             <div class="form-group row">
                 {!! Form::label('peso_actual', 'Peso Actual', ['class' => 'col-sm-4 col-form-label']) !!}
                 <div class="col-sm-8">
-                    {!! Form::number('peso_actual', null, ['class' => 'form-control form-control-sm'.($errors->has('peso_actual') ? ' is-invalid' : ''), 'placeholder' => 'Peso ahora']) !!}
+                    {!! Form::number('peso_actual', null, ['class' => 'form-control form-control-sm'.($errors->has('peso_actual') ? ' is-invalid' : ''), 'placeholder' => 'Peso en kg.']) !!}
                     @if ($errors->has('peso_actual'))
                         <span class="invalid-feedback">
                             <strong>{{ $errors->first('peso_actual') }}</strong>
@@ -51,7 +51,7 @@
                 </div>
             </div>
             <div class="form-group row">
-                <div class="col-sm-6">
+                <div class="col-sm-6 py-3">
                     {!! Form::number('triceps',null, ['class' => 'form-control form-control-sm'.($errors->has('triceps') ? '
                     is-invalid' : ''), 'placeholder' => 'Triceps', 'step' => 'any']) !!}
                     @if ($errors->has('triceps'))
@@ -71,7 +71,7 @@
                 </div>
             </div>
             <div class="form-group row">
-                <div class="col-sm-6">
+                <div class="col-sm-6 py-3">
                     {!! Form::number('suprailiaco',null, ['class' => 'form-control form-control-sm'.($errors->has('suprailiaco') ? '
                     is-invalid' : ''), 'placeholder' => 'Suprailiaco', 'step' => 'any']) !!}
                     @if ($errors->has('suprailiaco'))
@@ -91,7 +91,7 @@
                 </div>
             </div>
             <div class="form-group row">
-                <div class="col-sm-6">
+                <div class="col-sm-6 py-3">
                     {!! Form::number('pantorrilla',null, ['class' => 'form-control form-control-sm'.($errors->has('pantorrilla') ? '
                     is-invalid' : ''), 'placeholder' => 'Pantorrilla', 'step' => 'any']) !!}
                     @if ($errors->has('pantorrilla'))

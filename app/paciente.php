@@ -26,6 +26,8 @@ class paciente extends Model
     {
         return $this->hasMany(Antropometria::class);
     }
-
+    
+    public function planesNutri()
+        return $this->hasMany(PalnNutri::class);
 
 }
